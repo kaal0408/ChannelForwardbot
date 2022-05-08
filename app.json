@@ -1,0 +1,42 @@
+{
+  "name": "<input>", 
+  "description": "A telegram bot", 
+  "logo": "....",
+  "keywords": [
+    "Telegram",
+    "Telegram bot",
+    "Sivansh"
+    ],
+    "repository": "...",
+    "json_creator": "https://adarshpandit.netlify.app",
+    "addons": [
+      {
+         "options": {
+            "version": "12"
+         },
+         "plan": "heroku-postgresql"
+      }
+    ],
+    "env": {
+      "API_ID": {
+        "description": "Your telegram api id",
+        "value": ""
+      },
+      "API_HASH": {
+        "description": "Your telegeam api hash",
+        "value": ""
+      },
+      "BOT_TOKEN": {
+        "description": "Your Telegeam bot",
+        "value": ""
+      },
+      "FROM_CHANNEL": {
+        "description": "From channel ID",
+        "value": ""
+      },
+      "TO_CHANNEL": {
+        "description": "To channel ID",
+        "value": ""
+      }
+    }
+}
