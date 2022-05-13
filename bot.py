@@ -37,12 +37,12 @@ except:
 @datgbot.on(events.NewMessage(pattern="/start"))
 async def _(event):
     ok = await datgbot(GetFullUserRequest(event.sender_id))
-    await event.reply(f"Hi `{ok.user.first_name}`!\n\nI am a channel auto-post bot!! Read /help to know more!\n\nI can be used in only two channels (one user) at a time. Kindly deploy your own bot.\n\n[More bots](https://t.me/Status_star)..", buttons=[Button.url("Repo", url="https://github.com/kaal0408/ChannelForwardbot"), Button.url("Dev", url="https://t.me/BLACK_MAMBA_RETURNS_OP")], link_preview=False)
+    await event.reply(f"Hi `{ok.user.first_name}`!\n\nI am a channel auto-post bot!! Read /help to know more!\n\nI can be used in only two channels (one user) at a time. Kindly deploy your own bot.\n\n[More bots](https://t.me/Murat_30_God)..", buttons=[Button.url("Repo", url="https://github.com/kaal0408/ChannelForwardbot"), Button.url("Dev", url="https://t.me/BLACK_MAMBA_RETURNS_OP")], link_preview=False)
 
 
 @datgbot.on(events.NewMessage(pattern="/help"))
 async def helpp(event):
-    await event.reply("**Help**\n\nThis bot will send all new posts in one channel to the other channel. (without forwarded tag)!\nIt can be used only in two channels at a time, so kindly deploy your own bot from [here](https://github.com/kaal0408/ChannelForwardbot).\n\nAdd me to both the channels and make me an admin in both, and all new messages would be autoposted on the linked channel!!\n\nLiked the bot? Drop a ♥ to @Status_Star :)")
+    await event.reply("**Help**\n\nThis bot will send all new posts in one channel to the other channel. (without forwarded tag)!\nIt can be used only in two channels at a time, so kindly deploy your own bot from [here](https://github.com/kaal0408/ChannelForwardbot).\n\nAdd me to both the channels and make me an admin in both, and all new messages would be autoposted on the linked channel!!\n\nLiked the bot? Drop a ♥ to @Murat_30_God :)")
 
 @datgbot.on(events.NewMessage(incoming=True, chats=frm)) 
 async def _(event): 
@@ -69,5 +69,5 @@ async def _(event):
 
 
 print("Bot has started.")
-print("Do visit @status_Star..")
+print("Do visit @Murat_30_God..")
 datgbot.run_until_disconnected()
