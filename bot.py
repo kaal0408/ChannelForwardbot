@@ -11,27 +11,23 @@
 #    General Public License for more details.
 # 
 
+import os
 import logging
 import asyncio
 from telethon import TelegramClient, events, Button
-from decouple import config
 from telethon.tl.functions.users import GetFullUserRequest
 
 logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s', level=logging.INFO)
 
 # start the bot
 print("Starting...")
-try:
-    apiid = config("APP_ID", cast=int)
-    apihash = config("API_HASH")
-    bottoken = config("BOT_TOKEN")
-    frm = config("FROM_CHANNEL", cast=int)
-    tochnl = config("TO_CHANNEL", cast=int)
-    datgbot = TelegramClient('bot', apiid, apihash).start(bot_token=bottoken)
-except:
-    print("Environment vars are missing! Kindly recheck.")
-    print("Bot is quiting...")
-    exit()
+apiid = int(os.environ.get("API_ID", 6))
+apihash = os.environ.get("API_HASH", "")
+bottoken = os.environ.get("BOT_TOKEN", "")
+frm = os.environ.get("FROM_CHANNEL", "")
+tochnl = os.environ.get("TO_CHANNEL", "")
+
+datgbot = TelegramClient('bot', apiid, apihash).start(bot_token=bottoken)
 
 
 @datgbot.on(events.NewMessage(pattern="/start"))
